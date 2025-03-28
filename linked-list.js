@@ -1,4 +1,4 @@
-class LinkedList {
+export default class LinkedList {
 
     head = null;
 
@@ -114,7 +114,6 @@ class LinkedList {
         else {
             const newNode = new NewNode(value, this.at(index + 1));
             this.at(index - 1).nextNode = newNode;
-            //this.size = this.size + 1;
         }
         this.size = this.size + 1;
     }
@@ -151,14 +150,3 @@ class NewNode {
         this.nextNode = nextNode;
     }
 }
-
-const list = new LinkedList();
-
-list.append("dog"); // 0
-list.append("cat"); // 1
-list.append("parrot"); // 2
-list.append("hamster"); // 3
-list.append("snake"); // 4
-list.append("turtle"); // 5
-
-console.log(list.toString());
